@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading {
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    width: 500px;
+    padding: 2rem;
+    height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.inc-exp-container {
+    display: flex;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+    padding: 1rem;
+    height: 5rem;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.plus {
+    color: rgb(11, 189, 189);
+    font-weight: bolder;
+}
+
+.minus {
+    color: red;
+    font-weight: bolder;
+}
+
+/* =====================================Transaction=========================================== */
+
+.heading3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 1rem;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1p;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.list li {
+    background: #fafafa;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.delete-btn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* ======================================================Addtransaction================================= */
+
+input {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.btn {
+    width: 400px;
+    padding: 10px 15px;
+    margin-top: 4px;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: #fafafa;
+    background-color: rgb(20, 75, 75);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(8, 132, 180);
+}
+
+/* ======================================= Responsive Styles ================================== */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make the container adapt to smaller screens */
+        padding: 1.5rem;
+        height: auto; /* Let the height be flexible */
+    }
+
+    .list {
+        max-width: 100%; /* Adjust list width for smaller screens */
+    }
+
+    input, .btn {
+        width: 100%; /* Make input and button take full width on smaller screens */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .heading3 {
+        font-size: 20px; /* Smaller heading size for mobile */
+    }
+
+    .list li {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    .item {
+        width: 100%; 
+        margin-bottom: 1rem; 
+    }
+
+    .inc-exp-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .container {
+        padding:5px;
+    }
+
+    input, .btn {
+        width: 100%; 
+        padding: 8px; 
+    }
 }
